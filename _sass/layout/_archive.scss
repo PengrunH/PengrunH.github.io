@@ -10,7 +10,7 @@
   }
 
   @include breakpoint($large) {
-    @include span(10 of 12 last);
+    @include span(9.5 of 12 last);
     @include prefix(0.5 of 12);
   }
 
@@ -25,6 +25,16 @@
       }
     }
   }
+}
+
+.archive__item p {
+  margin: 0.5rem 0 0.25rem 0 !important;   /* very small gap */
+}
+
+p.archive__item-pub-authors,
+p.archive__item-venue,
+p.archive__item-teach {
+  margin: 0 0 0.25rem 0 !important;   /* very small gap */
 }
 
 .archive__subtitle {
