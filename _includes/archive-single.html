@@ -39,7 +39,7 @@
     <p class="archive__item-teach">{{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
     {%- elsif post.collection == 'publications' %}
     <p class="archive__item-pub-authors">{{ post.author | markdownify | remove: '<p>' | remove: '</p>' }}</p>
-    <p class="archive__item-venue"> <i>{{ post.venue }}</i> </p> 
+    <p class="archive__item-venue"> {{ post.venue }} </p>
     {% endif %}
     {% if post.excerpt and site.read_more != 'enabled' %}
     <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>

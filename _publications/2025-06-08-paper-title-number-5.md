@@ -6,7 +6,7 @@ category: conferences
 permalink: /publication/2024-02-17-paper-title-number-4
 excerpt: ''
 date: 2025-6-12
-venue: 'NeurIPS 2025 (Spotlight 3%)'
+venue: 'NeurIPS 2025 (<span style="color: red;">Spotlight 3%</span>)'
 paperurl: 'https://arxiv.org/abs/2506.10364'
 citation: ''
 ---
