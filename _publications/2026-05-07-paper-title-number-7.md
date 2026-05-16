@@ -6,7 +6,7 @@ category: arxiv
 permalink: /publication/2026-05-07-paper-title-number-7
 excerpt: ''
 date: 2026-05-07
-venue: 'arXiv preprint'
+venue: 'Preprint 2026'
 paperurl: 'https://arxiv.org/abs/2605.06865'
 citation: ''
 ---
