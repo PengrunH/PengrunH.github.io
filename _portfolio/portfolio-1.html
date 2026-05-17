@@ -3,21 +3,103 @@ title: "Photography"
 collection: portfolio
 ---
 
-<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 12px; align-items: start;">
-<figure style="margin: 0;">
-<img src="/images/portfolio_1.jpg" alt="" style="width: 100%; height: auto;">
-<figcaption style="text-align: center; font-size: 0.9em; color: #555; margin-top: 4px;"></figcaption>
-</figure>
-<figure style="margin: 0;">
-<img src="/images/portfolio_2.jpeg" alt="" style="width: 100%; height: auto;">
-<figcaption style="text-align: center; font-size: 0.9em; color: #555; margin-top: 4px;"></figcaption>
-</figure>
-<figure style="margin: 0;">
-<img src="/images/portfolio_3.jpeg" alt="" style="width: 100%; height: auto;">
-<figcaption style="text-align: center; font-size: 0.9em; color: #555; margin-top: 4px;"></figcaption>
-</figure>
-<figure style="margin: 0;">
-<img src="/images/portfolio_4.jpeg" alt="" style="width: 100%; height: auto;">
-<figcaption style="text-align: center; font-size: 0.9em; color: #555; margin-top: 4px;"></figcaption>
-</figure>
+<style>
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 12px;
+}
+.photo-grid figure {
+  margin: 0;
+  cursor: pointer;
+}
+.photo-grid .thumb-wrap {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+.photo-grid .thumb-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.2s ease;
+}
+.photo-grid figure:hover .thumb-wrap img {
+  transform: scale(1.03);
+}
+.photo-grid figcaption {
+  text-align: center;
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 4px;
+}
+
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+#lightbox.active {
+  display: flex;
+}
+#lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.5);
+}
+#lightbox-caption {
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #ddd;
+  font-size: 0.95em;
+}
+</style>
+
+<div class="photo-grid">
+  <figure onclick="openLightbox('/images/portfolio_1.jpg', '')">
+    <div class="thumb-wrap"><img src="/images/portfolio_1.jpg" alt=""></div>
+    <figcaption></figcaption>
+  </figure>
+  <figure onclick="openLightbox('/images/portfolio_2.jpeg', '')">
+    <div class="thumb-wrap"><img src="/images/portfolio_2.jpeg" alt=""></div>
+    <figcaption></figcaption>
+  </figure>
+  <figure onclick="openLightbox('/images/portfolio_3.jpeg', '')">
+    <div class="thumb-wrap"><img src="/images/portfolio_3.jpeg" alt=""></div>
+    <figcaption></figcaption>
+  </figure>
+  <figure onclick="openLightbox('/images/portfolio_4.jpeg', '')">
+    <div class="thumb-wrap"><img src="/images/portfolio_4.jpeg" alt=""></div>
+    <figcaption></figcaption>
+  </figure>
 </div>
+
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="">
+  <div id="lightbox-caption"></div>
+</div>
+
+<script>
+function openLightbox(src, caption) {
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox-caption').textContent = caption;
+  document.getElementById('lightbox').classList.add('active');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+  document.getElementById('lightbox-img').src = '';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
+});
+</script>
