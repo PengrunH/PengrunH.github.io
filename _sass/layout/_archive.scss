@@ -32,9 +32,15 @@
 }
 
 p.archive__item-pub-authors,
+p.archive__item-pub-meta,
 p.archive__item-venue,
 p.archive__item-teach {
   margin: 0 0 0.25rem 0 !important;   /* very small gap */
+}
+
+.archive__item-pdf {
+  font-size: $type-size-6;
+  white-space: nowrap;
 }
 
 .archive__subtitle {
