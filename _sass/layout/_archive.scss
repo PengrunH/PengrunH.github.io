@@ -32,7 +32,6 @@
 }
 
 p.archive__item-pub-authors,
-p.archive__item-pub-meta,
 p.archive__item-venue,
 p.archive__item-teach {
   margin: 0 0 0.25rem 0 !important;   /* very small gap */
@@ -44,11 +43,12 @@ p.archive__item-teach {
 }
 
 .archive__item-title-text {
-  color: #0a3d7a;
+  color: #1E90FF;
   font-weight: bold;
 }
 
-p.archive__item-pub-meta {
+p.archive__item-pub-authors,
+p.archive__item-venue {
   font-size: 0.9em;
 }
 
