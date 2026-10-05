@@ -20,6 +20,7 @@
   @include breakpoint($large) {
     @include span(9.5 of 12 last);
     @include prefix(0.5 of 12);
+    width: 70%;
   }
 
   .page__inner-wrap {
