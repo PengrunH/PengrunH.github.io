@@ -1,5 +1,5 @@
 ---
-title: "Dataset Watermarking for Closed LLMs with Provable Detection"
+title: "Dataset Watermarking with Provable Black-Box Detection"
 author: "**Pengrun Huang**, Kamalika Chaudhuri, Yu-Xiang Wang"
 collection: publications
 category: arxiv
