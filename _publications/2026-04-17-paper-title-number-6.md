@@ -6,7 +6,7 @@ category: conferences
 permalink: /publication/2026-04-17-paper-title-number-6
 excerpt: ''
 date: 2026-04-17
-venue: 'NeurIPS 2026 (E&D)'
+venue: 'NeurIPS 2026 (Evaluations & Datasets)'
 paperurl: 'https://arxiv.org/abs/2604.15851'
 citation: ''
 ---
